@@ -1,0 +1,61 @@
+.buttons {
+    @extend %list;
+    display: flex;
+    align-items: center;
+    /* min-width: 575px; */
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-left: 297px; */
+    padding-bottom: 16px;
+    margin-bottom: 50px;
+
+
+
+
+.buttons__button-filter {
+    display: inline-block;
+    align-items: center;
+    padding: 6px 22px;
+    min-width: auto;
+
+    color: $title-text-color;
+    background: $third-background-color;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    cursor: pointer;
+
+    border: solid transparent;
+    border-radius: 4px;
+
+    transition:
+        color 
+        $transition-duration 
+        $transition-timing-function,
+        background-color 
+        $transition-duration 
+        $transition-timing-function,
+        box-shadow 
+        $transition-duration 
+        $transition-timing-function;
+}
+
+&__button-filter:hover,
+&__button-filter:focus {
+    color: $background-color;
+    background-color: $accent-color;
+    box-shadow: 
+    0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+}
+
+.buttons__item+.buttons__item {
+    margin-left: 8px;
+}
+}

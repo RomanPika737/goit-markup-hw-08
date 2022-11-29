@@ -1,0 +1,120 @@
+.portfolio-card__title {
+    width: 322px;
+
+    color: $title-text-color;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+
+.portfolio-card__product {
+    margin-top: 4px;
+
+    color: $main-text-color;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.88;
+}
+
+.portfolio-list {
+    @extend %list;
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: calc(-1 * $card-set-gap);
+    margin-top: calc(-1 * $card-set-gap);
+
+
+.portfolio-list img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.portfolio-card__headlines {
+    padding: 20px 24px;
+
+    border-left: 1px solid $second-border-color;
+    border-right: 1px solid $second-border-color;
+    border-bottom: 1px solid $second-border-color;
+}
+
+
+
+.portfolio-list__item {
+    width: 370px;
+    background-color: $background-color;
+
+    flex-basis: calc(100% / 3 - $card-set-gap);
+    margin-top: $card-set-gap;
+    margin-left: $card-set-gap;
+
+    transition: 
+    box-shadow 
+    $transition-duration 
+    $transition-timing-function;
+
+}
+
+&__item:hover,
+&__item:focus {
+    border: $second-border-color;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+}
+
+.portfolio-card {
+    display: block;
+    text-decoration: none;
+
+    transition:
+        box-shadow $transition-duration $transition-timing-function;
+
+
+&:hover &__description,
+&:focus &__description {
+    transform: translateY(0);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-card__thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-card__description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transform: translateY(101%);
+    transition: 
+    transform 
+    $transition-duration 
+    $transition-timing-function;
+}
+
+.portfolio-card__thumb .portfolio-card__text {
+    display: inline-block;
+    margin: 63px 24px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+
+    letter-spacing: 0.03em;
+
+    color: $background-color;
+}
+}

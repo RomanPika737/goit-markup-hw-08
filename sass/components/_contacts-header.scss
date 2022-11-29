@@ -1,0 +1,49 @@
+.mail-tel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.contacts-header {
+    @extend %list;
+    display: flex;
+
+
+&__item + &__item {
+    margin-left: 50px;
+}
+
+&__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 22px 0;
+    /* fill: $main-text-color; */
+    color: $main-text-color;
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    transition: color 
+    $transition-duration 
+    $transition-timing-function;
+
+}
+
+&__icon {
+    display: block;
+    text-decoration: none;
+    margin-right: 10px;
+    fill: currentColor;
+
+}
+
+&__link:hover,
+&__link:focus {
+    color: $accent-color;
+    /* fill: $accent-color; */
+
+}
+}
