@@ -1099,6 +1099,7 @@ body.modal-open {
 }
 
 .page-header {
+  width: 480px;
   position: relative;
 }
 
