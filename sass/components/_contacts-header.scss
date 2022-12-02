@@ -1,29 +1,36 @@
 .mail-tel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
+    display: block;
+    margin-top: 300px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // margin-left: auto;
 }
 
 .contacts-header {
     @extend %list;
+    // display: block;
     display: flex;
+    flex-direction: column-reverse;
 
 
-&__item + &__item {
-    margin-left: 50px;
-}
+// &__item + &__item {
+//     margin-left: 50px;
+// }
 
-&__link {
+.contacts-header__link {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 22px 0;
+    // justify-content: center;
+    // align-items: center;
+    // padding: 22px 0;
     /* fill: $main-text-color; */
+    padding: 16px 0;
     color: $main-text-color;
     text-decoration: none;
     font-weight: 500;
-    line-height: 1.14;
+    font-size: 34px;
+    line-height: 1.18;
+    // line-height: 1.14;
     letter-spacing: 0.02em;
 
     transition: color 
@@ -32,12 +39,19 @@
 
 }
 
-&__icon {
+.contacts-header__icon {
     display: block;
     text-decoration: none;
     margin-right: 10px;
     fill: currentColor;
 
+    
+}
+
+@media screen and (max-width:768px) {
+    .contacts-header__icon {
+        display: none;
+    }
 }
 
 &__link:hover,

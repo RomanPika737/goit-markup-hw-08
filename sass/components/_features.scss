@@ -3,18 +3,21 @@
 }
 
 .features-icons {
-    display: flex;
+    display: block;
+    // display: flex;
 }
 
-.features-icons__icon:not(:last-child) {
-    margin-right: 30px;
-}
+// .features-icons__icon:not(:last-child) {
+//     margin-right: 30px;
+// }
 
 .features-icons__icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 270px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    padding: 25px 0;
+    text-align: center;
+    width: 450px;
     height: 120px;
     background-color: $third-background-color;
     border-radius: 4px;
@@ -22,16 +25,19 @@
 
 .features-list {
     @extend %list;
-    display: flex;
+    // display: flex;
 }
 
 .features-list__item {
-    width: 270px;
+    width: 450px;
+}
+.features-list__item:not(:last-child) {
+    margin-bottom: 30px;
 }
 
-.features-list__item + .features-list__item {
-    margin-left: 30px;
-}
+// .features-list__item + .features-list__item {
+//     margin-left: 30px;
+// }
 
 .features-list__title {
     margin-top: 30px;

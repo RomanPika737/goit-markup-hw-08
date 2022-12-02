@@ -1,5 +1,10 @@
 .footer__address-wrapper {
-    margin-right: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // margin-right: auto;
+    // margin-left: auto;
+    // margin-right: 70px;
 }
 
 .footer__address {
@@ -12,6 +17,7 @@
 
 .footer__links {
     @extend %list;
+    text-align: center;
 }
 
 .footer__link {

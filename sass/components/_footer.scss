@@ -1,10 +1,12 @@
 .footer {
+    width: 480px;
     padding-top: 60px;
     padding-bottom: 60px;
-    background: $fourth-background-color;
+    background-color: $fourth-background-color;
 }
 
 .footer__container {
-    display: flex;
-    align-items: baseline;
+    // background-color: $fourth-background-color;
+//     // display: flex;
+//     // align-items: baseline;
 }

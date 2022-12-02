@@ -1,9 +1,10 @@
 .regular-clients__title {
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
+    margin-bottom: 30px;
 
     font-weight: 700;
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 28px;
+    line-height: 1.18;
     text-align: center;
     letter-spacing: 0.03em;
 }
@@ -11,23 +12,32 @@
 .clients {
     @extend %list;
     display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
 
 
 .clients__item {
     display: block;
     margin: 0;
     padding: 0;
+    // width: 210px;
+
+    flex-basis: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
 }
 
-.clients__item+.clients__item {
-    margin-left: 30px;
-}
+// .clients__item+.clients__item {
+//     margin-left: 30px;
+// }
 
 .clients__link {
     display: block;
-    padding: 16px 32px;
-    width: 170px;
-    height: 92px;
+   
+    padding: 16px 0;
+    // width: 170px;
+    // height: 92px;
+    // width: 210px;
+    // height: 92px;
     text-decoration: none;
     fill: $svg-icon-color;
     border: 1px solid $svg-icon-color;
@@ -44,6 +54,8 @@
 
 .clients__client-icon {
     display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 &__link:hover,

@@ -37,3 +37,7 @@ body {
     background: '$background-color';
     color: '$title-text-color';
 }
+
+body.modal-open {
+    overflow: hidden;
+}
