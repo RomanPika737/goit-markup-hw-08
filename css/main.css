@@ -1146,6 +1146,7 @@ body.modal-open {
   padding: 48px 40px;
   background-color: #ffffff;
 }
-.menu-container .menu-container.is-open {
+
+.menu-container.is-open {
   display: block;
 }/*# sourceMappingURL=main.css.map */
