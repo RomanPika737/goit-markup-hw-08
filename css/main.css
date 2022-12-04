@@ -42,7 +42,7 @@ body.modal-open {
   overflow: hidden;
 }
 
-.portfolio-list, .buttons, .footer .footer__social-link, .footer__links, .clients, .team .team__social-link, .team .team__cards, .work__list, .features-list, .contacts-header, .site-nav {
+.portfolio-list, .buttons, .footer .footer__social-link, .footer__links, .clients, .team .team__social-link, .team .team__cards, .work__list, .features-list, .contacts-header, .social-media, .site-nav {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -134,9 +134,52 @@ body.modal-open {
   color: #2196F3;
 }
 
+.social-media {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 64px;
+}
+
+.social-media__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.social-media__link {
+  display: block;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  text-decoration: none;
+  /* identical to box height, or 122% */
+  letter-spacing: 0.02em;
+  color: #2196F3;
+}
+
+.social-media__item {
+  position: relative;
+}
+
+.social-media__item:not(:first-child)::before {
+  content: " ";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  left: -10px;
+  background-color: rgba(33, 33, 33, 0.2);
+}
+
 .mail-tel {
   display: block;
-  margin-top: 300px;
+  margin-top: 200px;
 }
 
 .contacts-header {
@@ -179,13 +222,11 @@ body.modal-open {
   /* fill: $accent-color; */
 }
 
-.main {
-  width: 480px;
-}
-
 .overlay {
   max-width: 480px;
   height: 400px;
+  margin-left: auto;
+  margin-right: auto;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/backgroundhero.jpg");
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/backgroundhero.jpg");
   background-repeat: no-repeat;
@@ -251,8 +292,7 @@ body.modal-open {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 96px 15px 15px;
-  width: 480px;
+  width: 100%;
   height: 100%;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.2);
@@ -278,6 +318,8 @@ body.modal-open {
 
 .modal {
   position: absolute;
+  top: 94px;
+  left: 15px;
   padding: 40px;
   -webkit-transform: scale(1) rotate(0);
           transform: scale(1) rotate(0);
@@ -507,7 +549,7 @@ body.modal-open {
 .features-icons__icon {
   padding: 25px 0;
   text-align: center;
-  width: 450px;
+  width: 100%;
   height: 120px;
   background-color: #F5F4FA;
   border-radius: 4px;
@@ -736,7 +778,6 @@ body.modal-open {
 }
 
 .footer {
-  width: 480px;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2F303A;
@@ -1099,11 +1140,10 @@ body.modal-open {
 }
 
 .page-header {
-  width: 480px;
   position: relative;
 }
 
-.page-header .nav {
+.page-header .navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1113,6 +1153,10 @@ body.modal-open {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.page-header .container {
+  position: relative;
 }
 
 .menu-button {
@@ -1140,12 +1184,11 @@ body.modal-open {
 .menu-container {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 130%;
   left: 0;
-  width: 480px;
-  height: 796px;
+  width: 100%;
   padding: 48px 40px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 
 .menu-container.is-open {
