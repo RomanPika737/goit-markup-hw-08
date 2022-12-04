@@ -7,6 +7,13 @@
     // margin-left: auto;
 }
 
+@media screen and (max-width:768px) {
+    .mail-tel { 
+    display: none;
+    }
+    
+}
+
 .contacts-header {
     @extend %list;
     // display: block;
