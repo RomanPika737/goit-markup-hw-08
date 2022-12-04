@@ -22,6 +22,10 @@
   padding: 12px 8px;
   border: none;
   background-color: transparent;
+  fill: inherit;
+
+  transition:
+      fill $transition-duration $transition-timing-function;
 }
 
 .menu-button .icon-cross {
@@ -34,6 +38,11 @@
 
 .menu-button.is-open .icon-menu {
   display: none;
+}
+
+.menu-button:hover,
+.menu-button:focus {
+  fill: $accent-color;
 }
 
 .menu-container {
