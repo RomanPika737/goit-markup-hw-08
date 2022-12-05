@@ -1,12 +1,17 @@
 .footer {
+    // display: inline-flex;
     // width: 480px;
-    padding-top: 60px;
-    padding-bottom: 60px;
+   
     background-color: $fourth-background-color;
+    @media screen and (max-width:767px) {
+        min-width: 480px;
+            padding-top: 60px;
+            padding-bottom: 60px;
+    }
 }
 
 .footer__container {
     // background-color: $fourth-background-color;
-//     // display: flex;
+    // display: flex;
 //     // align-items: baseline;
 }

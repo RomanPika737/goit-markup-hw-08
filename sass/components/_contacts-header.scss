@@ -1,48 +1,80 @@
 .mail-tel {
     display: block;
-    margin-top: 200px;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 315px;
+
+
+@media screen and (max-width: 767px) {
+    display: none;  
 }
 
-@media screen and (max-width:768px) {
-    .mail-tel { 
-    display: none;
-    }
-    
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        // margin-left: auto;
+}
+
+ @media screen and (min-width: 768px) and (max-width: 1199px) {
+     margin-left: 90px;
+ }
 }
 
 .contacts-header {
     @extend %list;
     // display: block;
     display: flex;
-    flex-direction: column-reverse;
 
+   
 
-// &__item + &__item {
-//     margin-left: 50px;
-// }
+   
+.contacts-header__item + .contacts-header__item {
+    @media screen and (min-width: 1200px) {
+        margin-left: 30px;
+    }
+    
+}
+
+@media screen and (max-width: 767px) {
+flex-direction: column-reverse;
+}
+
+@media screen and (min-width:768px) and (max-width: 1199px) {
+    flex-direction: column;
+}
 
 .contacts-header__link {
     display: flex;
     // justify-content: center;
-    // align-items: center;
+    align-items: center;
     // padding: 22px 0;
     /* fill: $main-text-color; */
-    padding: 16px 0;
+    padding: 22px 0;
     color: $main-text-color;
     text-decoration: none;
     font-weight: 500;
-    font-size: 34px;
-    line-height: 1.18;
-    // line-height: 1.14;
+    font-size: 14px;
+    line-height: 1.14;
     letter-spacing: 0.02em;
 
     transition: color 
     $transition-duration 
     $transition-timing-function;
+
+    @media screen and (max-width: 767px) {
+        padding: 16px 0;
+        font-size: 34px;
+            line-height: 1.18;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        padding: 5px 0;
+        font-size: 12px;
+            line-height: 1.17;
+    }
+
 
 }
 
@@ -52,10 +84,15 @@
     margin-right: 10px;
     fill: currentColor;
 
+    @media screen and (max-width: 1199px) {
+        width: 14px;
+        height: 16px;
+    }
+
     
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 767px) {
     .contacts-header__icon {
         display: none;
     }
