@@ -1,19 +1,23 @@
 .team {
     // padding-bottom: 94px;
-    padding: 60px 0;
+    // padding: 60px 0;
 
     background: $third-background-color;
 
 
 .team__title {
-    // margin-bottom: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    
 
     color: $title-text-color;
     font-weight: 700;
     font-size: 28px;
     line-height: 1.18;
     text-align: center;
+
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 30px;
+    }
 }
 
 .cards img {
@@ -26,25 +30,51 @@
     @extend %list;
     // display: flex;
     // flex-wrap: wrap;
-    // gap: 30px;
+   
+
+    @media screen and (min-width:768px) and (max-width: 1199px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
 }
 
 .team__card {
-    width: 450px;
+    width: 270px;
     padding-bottom: 24px;
-
-    // flex-basis: calc((100% - 90px) / 4);
+    flex-basis: calc((100% - 90px) / 4);
 
     background-color: $background-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+
+    @media screen and (max-width: 767px) {
+        width: 450px;
+        // padding-bottom: 24px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: 354px;
+        // padding-bottom: 24px;
+            flex-basis: calc((100% - 4 * 15px) / 2);
+            margin: 15px;
+        }
 }
 
 .team__card:not(:last-child) {
+@media screen and (max-width: 767px) {
     margin-bottom: 30px;
+    }
 }
+   
 
 .team__name {
     margin-top: 30px;
@@ -74,6 +104,7 @@
     height: 44px;
     margin-left: auto;
     margin-right: auto;
+
 }
 
 .team__social-link {
@@ -101,9 +132,9 @@
     $transition-timing-function;
 }
 
-// .team__social-item+.team__social-item {
-//     margin-left: 10px;
-// }
+.team__social-item+.team__social-item {
+    margin-left: 10px;
+}
 
 .team__media-icon {
     display: block;

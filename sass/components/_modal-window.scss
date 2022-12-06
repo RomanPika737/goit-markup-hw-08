@@ -20,6 +20,10 @@
      visibility 
      $modal-transition-duration 
      $transition-timing-function;
+
+    //  @media screen and (max-width: 1199px) {
+    //     padding-top: 850px;
+    //  }
  }
 
  .backdrop.is-hidden {
