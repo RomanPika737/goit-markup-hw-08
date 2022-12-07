@@ -1,5 +1,5 @@
 .regular-clients__title {
-    // margin-bottom: 50px;
+    
     margin-bottom: 30px;
 
     font-weight: 700;
@@ -7,6 +7,12 @@
     line-height: 1.18;
     text-align: center;
     letter-spacing: 0.03em;
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+        font-size: 36px;
+            line-height: 42px;
+        }
 }
 
 .clients {
@@ -15,6 +21,11 @@
     flex-wrap: wrap;
     margin: -15px;
 
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        margin: 0;
+    }
+
 
 .clients__item {
     display: block;
@@ -22,13 +33,25 @@
     padding: 0;
     // width: 210px;
 
-    flex-basis: calc((100% - 4 * 15px) / 2);
-    margin: 15px;
+    @media screen and (max-width: 767px) {
+        flex-basis: calc((100% - 4 * 15px) / 2);
+            margin: 15px;
+        }
+    
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        flex-basis: calc((100% - 6 * 15px) / 3);
+        margin: 15px;
+    }
+
 }
 
-// .clients__item+.clients__item {
-//     margin-left: 30px;
-// }
+.clients__item+.clients__item {
+    @media screen and (min-width: 1200px) {
+        margin-left: 30px;
+    }
+   
+}
 
 .clients__link {
     display: block;
@@ -37,7 +60,7 @@
     // width: 170px;
     // height: 92px;
     // width: 210px;
-    // height: 92px;
+    height: 92px;
     text-decoration: none;
     fill: $svg-icon-color;
     border: 1px solid $svg-icon-color;
@@ -50,6 +73,12 @@
         fill 
         $transition-duration 
         $transition-timing-function;
+
+       @media screen and (min-width: 1200px) {
+        padding: 16px 32px;
+            width: 170px;
+            height: 92px;
+       }
 }
 
 .clients__client-icon {

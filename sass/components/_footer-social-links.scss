@@ -21,6 +21,18 @@ align-items: center;
     /* margin-left: 70px; */
     /* margin-right: auto; */
 
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+            margin-top: 0;
+}
+
+@media screen and (min-width: 1200px) {
+        display: block;
+            align-items: center;
+            width: 206px;
+            height: 80px;
+            margin-top: 0;
+}
+
 }
 
 .footer__social-link {
