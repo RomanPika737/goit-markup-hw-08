@@ -8,15 +8,73 @@
     height: 400px;
     margin-left: auto;
     margin-right: auto;
-    background-image:
-        linear-gradient(to right,
-            rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)),
-        url('../images/backgroundhero.jpg');
+    // background-image:
+    //     linear-gradient(to right,
+    //         rgba(47, 48, 58, 0.4),
+    //         rgba(47, 48, 58, 0.4)),
+    //     url('../images/backgroundhero.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-color: $overlay-background-color;
+
+    // Mobile screen
+        background-image: 
+        linear-gradient(to right,
+         rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)),
+            url(../images/overlay/header-img@1x-mob.jpg);
+    
+        // retina mobile screen
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image:
+             linear-gradient(to right,
+             rgba(47, 48, 58, 0.4),
+             rgba(47, 48, 58, 0.4)),
+                url(../images/overlay/header-img@2x-mob.jpg);
+        }
+
+// Tablet screen
+ @media screen and (min-width: 481px) {
+     background-image: 
+     linear-gradient(to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)),
+         url(../images/overlay/header-img@1x-tab.jpg);
+        
+    // retina tablet screen
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: 
+        linear-gradient(to right,
+         rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)),
+            url(../images/overlay/header-img@2x-tab.jpg);
+    }
+}
+
+// Desktop screen
+@media screen and (min-width: 769px) {
+    background-image:
+     linear-gradient(to right,
+      rgba(47, 48, 58, 0.4),
+       rgba(47, 48, 58, 0.4)),
+        url(../images/overlay/img@1x-desk.jpg);
+
+    // retina desktop screen
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image:
+        linear-gradient(to right,
+         rgba(47, 48, 58, 0.4), 
+         rgba(47, 48, 58, 0.4)),
+            url(../images/overlay/img@2x-desk.jpg);
+    }
+}
 
     @media screen and (min-width: 1200px) {
         height: 600px;

@@ -340,7 +340,22 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__cards list">
             <li class="team__card">
-              <img src="./images/photo1.jpg" alt="фото дизайнера продукту" width="270" />
+              <img class="team__card-img"
+              srcset="
+              ./images/team/img1-270.jpg 270w,
+              ./images/team/img1-354.jpg 354w,
+              ./images/team/img1-450.jpg 450w,
+              ./images/team/img1-540.jpg 540w,
+              ./images/team/img1-708.jpg 708w,
+              ./images/team/img1-900.jpg 900w
+              "
+              sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 91vw"
+              src="./images/team/img1-270.jpg" 
+              alt="фото дизайнера продукту" 
+              width="270" 
+              height="260"
+              loading="lazy"
+              />
               <h3 class="team__name">Ігор Дем'яненко</h3>
               <p class="team__position" lang="en">Product Designer</p>
               <div class="team__social-links">
@@ -393,7 +408,8 @@
               </div>
             </li>
             <li class="team__card">
-              <img src="./images/photo2.jpg" alt="фото розробника" width="270" />
+              <img class="team__card-img"
+              src="./images/photo2.jpg" alt="фото розробника" width="270" />
               <h3 class="team__name">Ольга Рєпіна</h3>
               <p class="team__position" lang="en">Frontend Developer</p>
               <div class="team__social-links">
@@ -446,7 +462,8 @@
               </div>
             </li>
             <li class="team__card">
-              <img src="./images/photo3.jpg" alt="фото маркетолога" width="270" />
+              <img class="team__card-img"
+              src="./images/photo3.jpg" alt="фото маркетолога" width="270" />
               <h3 class="team__name">Микола Тарасов</h3>
               <p class="team__position" lang="en">Marketing</p>
               <div class="team__social-links">
@@ -499,7 +516,8 @@
               </div>
             </li>
             <li class="team__card">
-              <img src="./images/photo4.jpg" alt="фото дизайнера інтерфейсу" width="270" />
+              <img class="team__card-img"
+              src="./images/photo4.jpg" alt="фото дизайнера інтерфейсу" width="270" />
               <h3 class="team__name">Михайло Єрмаков</h3>
               <p class="team__position" lang="en">UI Designer</p>
               <div class="team__social-links">
