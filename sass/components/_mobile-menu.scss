@@ -101,9 +101,12 @@
         }
     
         .menu-container {
+          display: flex;
+          flex-direction: column;
           position: fixed;
           top: 0;
           left: 0;
+          height: 100%;
           width: 100%;
           padding: 48px 40px;
           background-color: $background-color;
@@ -184,8 +187,9 @@
 }
 
 .mobile-contacts {
-  display: block;
-  margin-top: 300px;
+  display: flex;
+  margin-top: auto;
+  // margin-top: 300px;
   // display: flex;
   // align-items: center;
   // justify-content: center;
