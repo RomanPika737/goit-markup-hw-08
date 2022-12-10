@@ -1,11 +1,13 @@
 .page-header {
+    min-width: 480px;
     
     padding-top: 10px;
     padding-bottom: 10px;
     background: $background-color;
     border-bottom: 2px solid $first-border-color;
 
-    @media screen and (max-width: 767px) {
-    // width: 480px;  
-    }
+    // @media screen and (min-width: 480px) and (max-width: 767px) {
+    // // width: 100%;
+    // min-width: 480px;
+    // }
 }

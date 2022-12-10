@@ -1,6 +1,6 @@
-// .main {
-//     width: 480px;
-// }
+.main {
+   min-width: 480px;
+}
 
 .overlay {
     max-width: 1600px;
@@ -17,6 +17,7 @@
     background-position: center;
     background-size: cover;
     background-color: $overlay-background-color;
+    // background-size: 480px;
 
     // Mobile screen
         background-image: 
@@ -83,6 +84,7 @@
 }
 
 .hero {
+    min-width: 480px;
     margin: 0 auto;
     padding-top: 118px;
     padding-bottom: 118px;
@@ -106,6 +108,7 @@
     text-transform: uppercase;
 
     @media screen and (min-width: 1200px) {
+
         font-size: 44px;
         line-height: 1.36;
         text-align: center;
