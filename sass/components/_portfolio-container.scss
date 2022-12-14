@@ -1,4 +1,14 @@
+// main {
+//     width: 480px;
+//     margin-right: auto;
+//     margin-left: auto;
+// }
+
 .portfolio__container {
     display: flex;
     flex-wrap: wrap;
+    
+    @media screen and (max-width: 480px) {
+            width: 100%;
+        }
 }

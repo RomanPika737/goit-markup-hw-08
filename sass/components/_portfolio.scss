@@ -1,3 +1,10 @@
+// main {
+//     @media screen and (max-width: 767px) {
+//     width: 480px;
+//     }
+    
+// }
+
 .portfolio-card__title {
     width: 322px;
 
@@ -24,12 +31,27 @@
     @extend %list;
     display: flex;
     flex-wrap: wrap;
+    // justify-content: center;
 
-    margin-left: calc(-1 * $card-set-gap);
-    margin-top: calc(-1 * $card-set-gap);
+    @media screen and (min-width:768px) and (max-width: 1199px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: calc(-1 * $card-set-gap);
+        margin-top: calc(-1 * $card-set-gap);
+    }
+
+    // margin-left: calc(-1 * $card-set-gap);
+    // margin-top: calc(-1 * $card-set-gap);
 
 
-.portfolio-list img {
+.portfolio-card__img {
     display: block;
     width: 100%;
     height: auto;
@@ -46,18 +68,45 @@
 
 
 .portfolio-list__item {
-    width: 370px;
+    // width: 370px;
+    width: 100%;
     background-color: $background-color;
+    // text-align: left;
 
-    flex-basis: calc(100% / 3 - $card-set-gap);
-    margin-top: $card-set-gap;
-    margin-left: $card-set-gap;
+
+    // flex-basis: calc(100% / 3 - $card-set-gap);
+    // margin-top: $card-set-gap;
+    // margin-left: $card-set-gap;
 
     transition: 
     box-shadow 
     $transition-duration 
     $transition-timing-function;
 
+    // @media screen and (max-width: 767px) {
+    //     width: 450px;
+    // }
+
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            width: 354px;
+            // padding-bottom: 24px;
+            flex-basis: calc((100% - 4 * 15px) / 2);
+            margin: 15px;
+        }
+    @media screen and (min-width: 1200px) {
+        width: 370px;
+        flex-basis: calc(100% / 3 - $card-set-gap);
+        margin-top: $card-set-gap;
+        margin-left: $card-set-gap;
+    }    
+
+}
+
+.portfolio-list__item:not(:last-child) {
+    @media screen and (max-width: 767px) {
+        margin-bottom: 30px;
+    }
+   
 }
 
 &__item:hover,
