@@ -157,7 +157,7 @@
 
 .portfolio-card__thumb .portfolio-card__text {
     display: inline-block;
-    margin: 63px 24px;
+    margin: 77px 24px;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.56;
@@ -165,5 +165,13 @@
     letter-spacing: 0.03em;
 
     color: $background-color;
+
+    @media screen and (min-width: 768px) {
+        margin: 49px 24px 77px 24px ;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin: 63px 24px;
+    }
 }
 }
