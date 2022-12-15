@@ -73,18 +73,11 @@ body.modal-open {
 }
 
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 1200px) {
   .section {
-    width: 480px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-@media screen and (max-width: 1199px) {
-  .section {
-    padding: 60px 0;
+    padding: 94px 0;
   }
 }
 
@@ -367,7 +360,6 @@ body.modal-open {
 }
 
 .overlay {
-  max-width: 1600px;
   height: 400px;
   margin-left: auto;
   margin-right: auto;
@@ -415,7 +407,7 @@ body.modal-open {
 }
 
 .hero {
-  min-width: 480px;
+  max-width: 1600px;
   margin: 0 auto;
   padding-top: 118px;
   padding-bottom: 118px;
@@ -1471,12 +1463,16 @@ body.modal-open {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-column-gap: 8px;
+     -moz-column-gap: 8px;
+          column-gap: 8px;
+  row-gap: 15px;
   /* min-width: 575px; */
   margin-left: auto;
   margin-right: auto;
   /* margin-left: 297px; */
   padding-bottom: 16px;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 @media screen and (min-width: 768px) {
   .buttons {
@@ -1494,7 +1490,7 @@ body.modal-open {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 6px 26px;
+  padding: 6px 22px;
   min-width: auto;
   color: #212121;
   background: #F5F4FA;
@@ -1519,11 +1515,11 @@ body.modal-open {
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
-.buttons .buttons__item:nth-child(-n+3) {
-  margin-bottom: 15px;
-}
-.buttons .buttons__item:not(:last-child) {
-  margin-right: 8px;
+
+@media screen and (max-width: 767px) {
+  main {
+    min-width: 480px;
+  }
 }
 
 .portfolio-card__title {
@@ -1533,6 +1529,11 @@ body.modal-open {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-card__title {
+    width: 250px;
+  }
 }
 
 .portfolio-card__product {
@@ -1585,6 +1586,13 @@ body.modal-open {
   border-right: 1px solid #EEEEEE;
   border-bottom: 1px solid #EEEEEE;
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-list .portfolio-card__headlines {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
 .portfolio-list .portfolio-list__item {
   width: 100%;
   background-color: #FFFFFF;
@@ -1628,6 +1636,18 @@ body.modal-open {
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+  }
 }
 .portfolio-card:hover .portfolio-card__description, .portfolio-card:focus .portfolio-card__description {
   -webkit-transform: translateY(0);
