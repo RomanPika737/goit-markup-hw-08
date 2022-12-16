@@ -1,12 +1,13 @@
-main {
-    @media screen and (max-width: 767px) {
-    min-width: 480px;
-    }
+// main {
+//     @media screen and (max-width: 767px) {
+//     min-width: 480px;
+//     }
     
-}
+// }
 
 .portfolio-card__title {
-    width: 322px;
+    max-width: 322px;
+    width: 100%;
 
     color: $title-text-color;
 

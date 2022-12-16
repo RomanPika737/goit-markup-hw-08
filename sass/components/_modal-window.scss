@@ -58,9 +58,12 @@
      $modal-transition-duration 
      $transition-timing-function;
 
-     min-height: 581px;
-     width: 528px;
+    //  min-height: 581px;
+    //  width: 528px;
 
+    max-width: 450px;
+    width: 100%;
+    min-height: 609px;
     
 
      background-color: $background-color;
@@ -69,9 +72,9 @@
      0px 2px 1px rgba(0, 0, 0, 0.2);
      border-radius: 4px;
 
-     @media screen and (max-width: 1199px) {
-        min-height: 609px;
-            width: 450px;
+     @media screen and (min-width: 1200px) {
+        min-height: 581px;
+        width: 528px;
      }
  
 
@@ -155,6 +158,7 @@
 
  .modal-form__input {
      height: 40px;
+    //  max-width: 370px;
      width: 100%;
      padding-left: 42px;
      fill: $accent-color;
@@ -187,6 +191,7 @@
  .modal-form__textarea {
      padding: 12px 16px;
      height: 120px;
+
      width: 100%;
 
      border: 1px solid rgba(33, 33, 33, 0.2);
@@ -289,6 +294,7 @@
  }
 
  .modal-form__checkbox-text {
+    // width: 100%;
     font-size: 12px;
         line-height: 1.17;
 
